@@ -1,14 +1,13 @@
-/* TreeDemo.ts
+/* TreeDemonstration.ts
  *
  * Handles Tree demonstrations.
  */
-class TreeDemonstration extends Demonstration {
+class TreeDemonstration<K extends Comparable<K>, V> extends Demonstration {
 
     /* The tree data structure. */
-    tree : Tree;
+    tree : BinaryTree<K, V>;
 
-    constructor(tree : Tree) {
-        /* Stuff */
+    constructor(tree : BinaryTree<K, V>) {
         super();
         this.tree = tree;
     }
