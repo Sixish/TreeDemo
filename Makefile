@@ -11,7 +11,8 @@ OUTPUT_JS="release/scripts.js"
 OUTPUT_CSS="release/styles.css"
 
 # Typescript dependencies
-TS_FILES=$(addprefix $(DIR_TS)/, Tree.ts Demonstration.ts TreeDemonstration.ts)
+TS_FILES=$(addprefix $(DIR_TS)/, BinaryTree.ts BinaryTreeNode.ts \
+	DuplicateKeyException.ts Comparable.ts Demonstration.ts TreeDemonstration.ts)
 
 ALL : .PHONY_SETUP release/TreeDemonstration.html $(OUTPUT_JS) $(OUTPUT_CSS)
 
@@ -19,7 +20,8 @@ ALL : .PHONY_SETUP release/TreeDemonstration.html $(OUTPUT_JS) $(OUTPUT_CSS)
 	mkdir -p $(DIR_RELEASE)
 
 $(OUTPUT_JS) : $(TS_FILES)
-	tsc --outFile $(OUTPUT_JS) $(TS_FILES)
+	tsc
+	#tsc --outFile $(OUTPUT_JS) $(TS_FILES)
 
 release/TreeDemonstration.html : src/TreeDemonstration.html
 	cp $(DIR_SRC)/TreeDemonstration.html release/TreeDemonstration.html
