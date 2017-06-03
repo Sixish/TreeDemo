@@ -1,0 +1,13 @@
+body {
+  background-color: #112a9a;
+}
+#middle-pane {
+  background-color: #115ee7;
+  margin: 0 auto;
+  width: 30em;
+  height: 100%;
+}
+#demo {
+  height: 10em;
+  width: 20em;
+}
