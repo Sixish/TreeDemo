@@ -1,4 +1,5 @@
 DIR_RELEASE=release
+DIR_BUILD=build
 DIR_SRC=src
 DIR_TS=$(DIR_SRC)/ts
 DIR_LESS=$(DIR_SRC)/less
@@ -17,11 +18,10 @@ TS_FILES=$(addprefix $(DIR_TS)/, BinaryTree.ts BinaryTreeNode.ts \
 ALL : .PHONY_SETUP release/TreeDemonstration.html $(OUTPUT_JS) $(OUTPUT_CSS)
 
 .PHONY_SETUP : 
-	mkdir -p $(DIR_RELEASE)
+	mkdir -p $(DIR_RELEASE) $(DIR_BUILD)
 
 $(OUTPUT_JS) : $(TS_FILES)
-	tsc
-	#tsc --outFile $(OUTPUT_JS) $(TS_FILES)
+	nodejs build.js
 
 release/TreeDemonstration.html : src/TreeDemonstration.html
 	cp $(DIR_SRC)/TreeDemonstration.html release/TreeDemonstration.html

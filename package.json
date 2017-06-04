@@ -1,0 +1,19 @@
+{
+  "name": "treedemonstration",
+  "version": "1.0.0",
+  "description": "Interactive tree demonstration.",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sixish/TreeDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sixish/TreeDemo/issues"
+  },
+  "homepage": "https://github.com/Sixish/TreeDemo#readme"
+}
